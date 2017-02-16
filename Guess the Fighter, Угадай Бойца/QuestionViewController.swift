@@ -40,6 +40,9 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var congratulationsLabel: UILabel!
     @IBOutlet weak var congratStrip: UIStackView!
     //@IBOutlet weak var dotsStack: UIStackView!
+    @IBOutlet weak var betweenQuestionView: UIView!
+    @IBOutlet weak var moreInfoButton: UIButton!
+    
     
     var gradient: CAGradientLayer!
     var currentSelectedAnswer: String!
@@ -73,7 +76,6 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         ///start animations here
         self.gradientBackgroundColorAnimation()
         self.gradientBackgroundChangePositionAnimation()
-        
         /// First image init
         setNewImage(theGameController.currentFighter.image)
     }
@@ -137,7 +139,7 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         let cubeAnimationTransitionDirection: AnimationDirection = (row > self.currentRowIndex) ? .positive : .negative
         
         self.currentSelectedAnswer = theGameController.currentAnswerListData[row]
-
+        
         if self.currentRowIndex != row {    ///esli smestilis na novuyu yacheiku
             ///pri vibore v pickere obnovlyaem label s fighter name
             self.refreshCurrentFighterNameLabelWithAnimation(self.currentSelectedAnswer, animationDirection: cubeAnimationTransitionDirection)
@@ -184,15 +186,15 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         auxLabel.transform = CGAffineTransform(scaleX: 1.0, y: 0.1).concatenating(CGAffineTransform(translationX: 0.0, y: auxLabelOffset))
         
         label.superview!.addSubview(auxLabel)
-                                    ///
+        ///
         UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseOut, animations: {
             auxLabel.transform = CGAffineTransform.identity
             label.transform = CGAffineTransform(scaleX: 1.0, y: 0.1).concatenating(CGAffineTransform(translationX: 0.0, y: -auxLabelOffset))
-            }, completion: {_ in
-                label.text = auxLabel.text
-                label.transform = CGAffineTransform.identity
-                
-                auxLabel.removeFromSuperview()
+        }, completion: {_ in
+            label.text = auxLabel.text
+            label.transform = CGAffineTransform.identity
+            
+            auxLabel.removeFromSuperview()
         })
         
     }
@@ -284,7 +286,7 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 self.view.layoutIfNeeded()          ///      ///       ///     ///
                 // //////////////////////////////lllllllllllllllllllllllllllllll//
                 self.answerButton.setTitle("NEXT", for: UIControlState())
-                }, completion: { _ in
+            }, completion: { _ in
             })
             
             break
@@ -296,7 +298,7 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 }
                 self.view.layoutIfNeeded()
                 self.answerButton.setTitle("", for: UIControlState())
-                }, completion: { _ in
+            }, completion: { _ in
             })
             break
         default:
@@ -319,7 +321,7 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 }
                 self.view.layoutIfNeeded()
                 
-                }, completion: nil)
+            }, completion: nil)
             
             break
         case "CLOSE":
@@ -330,8 +332,8 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 }
                 self.view.layoutIfNeeded()
                 
-                }, completion: { _ in
-                    /// PICKER USER INTERACTION ENABLED
+            }, completion: { _ in
+                /// PICKER USER INTERACTION ENABLED
             })
             break
         default:
@@ -419,31 +421,31 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             
             UIView.animate(withDuration: 0.2, delay: 0.0, options: [], animations: {
                 self.signX[2].center.y -= self.view.bounds.height / 5
-                }, completion: { _ in
-                    self.signX[2].image = UIImage(named: "X1")
-                    UIView.animate(withDuration: 0.3, delay: 0.1, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.8, options: [], animations: {
-                        self.signX[2].center.y += self.view.bounds.height / 5
-                        }, completion: nil)
+            }, completion: { _ in
+                self.signX[2].image = UIImage(named: "X1")
+                UIView.animate(withDuration: 0.3, delay: 0.1, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.8, options: [], animations: {
+                    self.signX[2].center.y += self.view.bounds.height / 5
+                }, completion: nil)
             })
             break
         case 1:
             UIView.animate(withDuration: 0.2, delay: 0.0, options: [], animations: {
                 self.signX[1].center.y -= self.view.bounds.height / 5
-                }, completion: { _ in
-                    UIView.animate(withDuration: 0.3, delay: 0.1, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.8, options: [], animations: {
-                        self.signX[1].image = UIImage(named: "X1")
-                        self.signX[1].center.y += self.view.bounds.height / 5
-                        }, completion: nil)
+            }, completion: { _ in
+                UIView.animate(withDuration: 0.3, delay: 0.1, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.8, options: [], animations: {
+                    self.signX[1].image = UIImage(named: "X1")
+                    self.signX[1].center.y += self.view.bounds.height / 5
+                }, completion: nil)
             })
             break
         case 0:
             UIView.animate(withDuration: 0.2, delay: 0.0, options: [], animations: {
                 self.signX[0].center.y -= self.view.bounds.height / 5
-                }, completion: { _ in
-                    UIView.animate(withDuration: 0.3, delay: 0.1, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.8, options: [], animations: {
-                        self.signX[0].image = UIImage(named: "X1")
-                        self.signX[0].center.y += self.view.bounds.height / 5
-                        }, completion: nil)
+            }, completion: { _ in
+                UIView.animate(withDuration: 0.3, delay: 0.1, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.8, options: [], animations: {
+                    self.signX[0].image = UIImage(named: "X1")
+                    self.signX[0].center.y += self.view.bounds.height / 5
+                }, completion: nil)
             })
             break
         default:
@@ -457,7 +459,7 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         UIView.animate(withDuration: 1.0, animations: {
             self.answerButton.backgroundColor = UIColor.clear
             self.answerButton.center.y += self.answerButton.bounds.height
-            }, completion: nil)
+        }, completion: nil)
     }
     
     func answerButtonAnimationIfRightForGradients() {
@@ -466,7 +468,7 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         UIView.animate(withDuration: 1.0, animations: {
             self.answerButton.backgroundColor = UIColor.clear
             // self.answerButton.center.y += self.answerButton.bounds.height
-            }, completion: nil)
+        }, completion: nil)
     }
     
     func answerButtonAnimationOnPress() {
@@ -514,7 +516,7 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     func answerButtonGradient() {
         return
         /// RETURN KNOPKA ANSWER BUDET PROZRACHNOI
-        let gradient: CAGradientLayer = CAGradientLayer()
+        let gradient = CAGradientLayer()
         let newFrame: CGRect = CGRect(x: 0.0, y: 0.0, width: self.view.bounds.width, height: self.answerButton.bounds.height)
         gradient.frame = newFrame
         gradient.zPosition = -10
@@ -572,9 +574,9 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         anim.toValue = 0.0
         anim.duration = 1.0
         self.imageView.layer.add(anim, forKey: nil)
-        
-        
     }
     
-    
+    @IBAction func moreInfoPressed(_ sender: Any) {
+        
+    }
 }

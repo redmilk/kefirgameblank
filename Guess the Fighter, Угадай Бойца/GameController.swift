@@ -32,6 +32,7 @@ class GameController {
     var isItFirstQuestion: Bool = true
     var skipFighter: Bool = false
     var fightersCount: Int!
+    var betweenQuestionView: UIView!
     
     init() {
         
@@ -107,14 +108,14 @@ class GameController {
     func startGame() {
         ///zapustit igru
         self.initGame()
- 
+        
     }
     
     func initCurrentQuestion() {
         self.currentFighter = self.fighters[CURRENTQUESTIONINDEX]
         self.currentAnswerListData = self.getRandomAnswers(howmany: answerListCount)
         self.currentRightAnswerIndex = generateRightAnswer()
-        /// PAUZA MEZHDU VOPROSAMI, ZADERZHKA DO OBNOVLENIYA PICKERA
+        // PAUZA MEZHDU VOPROSAMI, ZADERZHKA DO OBNOVLENIYA PICKERA
         let triggerTime = (Int64(NSEC_PER_SEC) * Int64(1))
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(triggerTime) / Double(NSEC_PER_SEC), execute: { () -> Void in
             qVController.reloadPickerView()
@@ -130,15 +131,15 @@ class GameController {
         self.fighters.shuffle()
         self.scoreLabel!.text = score.description
         qVController.resetDots()
-        // userDefault 
+        // userDefault
         self.highscore = UserDefaults.standard.value(forKey: "highscore") as! Int
     }
     
     /// igrok oshibsya, propustit tekushiy vopros s nebolshoi zaderzhkoi
     func playerWasWrongSkipThisQuestion() {
+        // PAUZA MEZHDU VOPROSAMI, KOGDA IGROK OSHIBSYA
         let triggerTime = (Int64(NSEC_PER_SEC) * Int64(1))
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(triggerTime) / Double(NSEC_PER_SEC), execute: { () -> Void in
-            
             qVController.setNewImage(self.fighters[self.CURRENTQUESTIONINDEX].image)
             /// stavit centralnuyu v pickere opciyu vibora na sledushiy vopros
             qVController.isBetweenQuestions = false
@@ -151,9 +152,25 @@ class GameController {
         self.scoreLabel!.text = self.score.description
         qVController.congratStripSetState("OPEN")
         qVController.answerButtonSetState("CLOSE")
-        /// PAUZA MEZHDU VOPROSAMI
-        let triggerTime = (Int64(NSEC_PER_SEC) * Int64(3))
+        /*
+         *   PLACE FOR BLUR EFFECT ADDING
+         */
+        
+        // zamenit na animation delay
+        let triggerTime = (Int64(NSEC_PER_SEC) * Int64(1.0))
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(triggerTime) / Double(NSEC_PER_SEC), execute: { () -> Void in
+            //refresh frame of the betweenQuestionView
+            self.betweenQuestionView.frame = qVController.picker.frame
+            //self.betweenQuestionView.constraints = qVController.picker.constraints
+            UIView.transition(with: self.betweenQuestionView, duration: 0.55, options: [.curveEaseOut, .transitionCurlDown], animations: {
+                self.betweenQuestionView.isHidden = false
+            }, completion: nil)
+        })
+        
+        
+        // PAUZA MEZHDU VOPROSAMI, KOGDA IGROK OTVETIL VERNO!
+        let triggerTime_ = (Int64(NSEC_PER_SEC) * Int64(3))
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(triggerTime_) / Double(NSEC_PER_SEC), execute: { () -> Void in
             qVController.refreshCurrentFighterNameLabel("? ? ? ? ?")
             qVController.pickerSelectMiddleOption()
             qVController.congratStripSetState("CLOSE")
@@ -161,6 +178,14 @@ class GameController {
             qVController.setNewImage(self.fighters[self.CURRENTQUESTIONINDEX].image)
             /// stavit centralnuyu v pickere opciyu vibora na sledushiy vopros
             qVController.isBetweenQuestions = false
+            /*
+             *   PLACE FOR BLUR EFFECT REMOVING, TRANSITION
+             */
+            UIView.transition(with: self.betweenQuestionView, duration: 0.55, options: [.curveEaseOut, .transitionFlipFromTop], animations: {
+                self.betweenQuestionView.isHidden = true
+            }, completion: nil)
+            // with no animation
+            //self.betweenQuestionView.isHidden = true
         })
     }
     
@@ -181,6 +206,7 @@ class GameController {
     /// RIGHT
     func playerDidRightAnswer() {
         playSound("RIGHT")
+        // blur picker func
         qVController.imageViewFlyDownAnimation()
         qVController.answerButtonAnimationIfRightForGradients()
         if gameIsOver == false {
@@ -208,6 +234,7 @@ class GameController {
     /// CHECK IF GAME OVER
     func checkForPlayerGameOver(delayToGameOverAnimation: CFTimeInterval) {
         if self.triesLeft <= 0 {
+            // DELAY
             let triggerTime = (Int64(NSEC_PER_SEC) * Int64(delayToGameOverAnimation))
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(triggerTime) / Double(NSEC_PER_SEC), execute: { () -> Void in
                 ///zapomnit polozhenie gradienta i zapustit ego animaciyu s togozhe momenta posle restarta
@@ -224,10 +251,9 @@ class GameController {
     func goToTheNextQuestion() {
         let ifWeCanGoToTheNextQuestion = CURRENTQUESTIONINDEX + 1
         if ifWeCanGoToTheNextQuestion > fighters.count-1 {
-            
             ///FIX
             wholeGameIsPathedBy()
-        } else { //continue playing aPiqA
+        } else { //continue playing
             CURRENTQUESTIONINDEX += 1
         }
     }
@@ -343,8 +369,17 @@ class GameController {
         qVController.refreshCurrentFighterNameLabel("? ? ? ? ?")
         CURRENTQUESTIONINDEX = 0
         //qVController.pickerSelectMiddleOption()
+        // mezhdu voprosami view
+        
+        self.betweenQuestionView = qVController.betweenQuestionView
+        betweenQuestionView.isHidden = true
+        /*self.betweenQuestionView = UIView(frame: qVController.picker.frame)
+        betweenQuestionView.backgroundColor = UIColor.green
+        betweenQuestionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        betweenQuestionView.tag = 1 // the tag to remove
+        betweenQuestionView.isHidden = true
+        qVController.view.addSubview(betweenQuestionView) */
     }
-    
 }
 
 
