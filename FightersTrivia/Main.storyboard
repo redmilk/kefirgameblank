@@ -14,7 +14,7 @@
         <!--Game Over View Controller-->
         <scene sceneID="Ryn-Ne-YTm">
             <objects>
-                <viewController id="fem-r0-IPg" customClass="GameOverViewController" customModule="Guess_the_Fighter__Угадаи__Бои_ца" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fem-r0-IPg" customClass="GameOverViewController" customModule="FightersTrivia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RaJ-72-QGt"/>
                         <viewControllerLayoutGuide type="bottom" id="egz-qN-N8i"/>
@@ -129,10 +129,10 @@
             </objects>
             <point key="canvasLocation" x="3929" y="-332"/>
         </scene>
-        <!--View Controller-->
+        <!--Wiki View Controller-->
         <scene sceneID="az5-xJ-Bo2">
             <objects>
-                <viewController id="IrS-aR-INF" sceneMemberID="viewController">
+                <viewController id="IrS-aR-INF" customClass="WikiViewController" customModule="FightersTrivia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o6q-jt-xWn"/>
                         <viewControllerLayoutGuide type="bottom" id="Oh7-tV-7jK"/>
@@ -141,24 +141,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="pbl-fB-MSZ">
+                                <rect key="frame" x="178" y="324" width="20" height="20"/>
+                            </activityIndicatorView>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OZT-19-KVl">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </webView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="LrE-bi-WOQ">
-                                <rect key="frame" x="169" y="315" width="37" height="37"/>
-                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMt-SK-ONu">
+                                <rect key="frame" x="319" y="20" width="56" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                <state key="normal" title="❌"/>
+                                <connections>
+                                    <action selector="crossPressed:" destination="IrS-aR-INF" eventType="touchUpInside" id="nAJ-Yw-SUv"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="OZT-19-KVl" firstAttribute="width" secondItem="uJ5-TS-lsg" secondAttribute="width" id="0Ig-k7-hWr"/>
                             <constraint firstItem="OZT-19-KVl" firstAttribute="centerX" secondItem="uJ5-TS-lsg" secondAttribute="centerX" id="36Z-yF-mgt"/>
+                            <constraint firstItem="aMt-SK-ONu" firstAttribute="top" secondItem="o6q-jt-xWn" secondAttribute="bottom" id="CHG-sa-7jy"/>
+                            <constraint firstAttribute="trailing" secondItem="aMt-SK-ONu" secondAttribute="trailing" id="IP8-Fl-jIX"/>
+                            <constraint firstItem="aMt-SK-ONu" firstAttribute="width" secondItem="uJ5-TS-lsg" secondAttribute="width" multiplier="0.15" id="IYP-zu-QsG"/>
                             <constraint firstItem="OZT-19-KVl" firstAttribute="height" secondItem="uJ5-TS-lsg" secondAttribute="height" id="NJb-Jx-god"/>
-                            <constraint firstItem="LrE-bi-WOQ" firstAttribute="centerY" secondItem="OZT-19-KVl" secondAttribute="centerY" id="UG0-A5-HyJ"/>
-                            <constraint firstItem="LrE-bi-WOQ" firstAttribute="centerX" secondItem="OZT-19-KVl" secondAttribute="centerX" id="mNR-CS-vlh"/>
+                            <constraint firstItem="aMt-SK-ONu" firstAttribute="height" secondItem="uJ5-TS-lsg" secondAttribute="height" multiplier="0.09" id="ZVu-F9-iM1"/>
+                            <constraint firstItem="pbl-fB-MSZ" firstAttribute="centerY" secondItem="OZT-19-KVl" secondAttribute="centerY" id="b4h-Tu-id6"/>
+                            <constraint firstItem="pbl-fB-MSZ" firstAttribute="centerX" secondItem="OZT-19-KVl" secondAttribute="centerX" id="e7Y-ht-WuI"/>
                             <constraint firstItem="OZT-19-KVl" firstAttribute="centerY" secondItem="uJ5-TS-lsg" secondAttribute="centerY" id="r7s-gp-pgP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="pbl-fB-MSZ" id="N0J-G9-0hi"/>
+                        <outlet property="crossButton" destination="aMt-SK-ONu" id="ab4-VG-icW"/>
+                        <outlet property="webView" destination="OZT-19-KVl" id="GLm-FN-yNu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tyE-Mh-Gm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,7 +184,7 @@
         <!--Web View Controller-->
         <scene sceneID="1ih-XH-kGM">
             <objects>
-                <viewController id="4M2-DL-TiA" customClass="WebViewController" customModule="Guess_the_Fighter__Угадаи__Бои_ца" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4M2-DL-TiA" customClass="WebViewController" customModule="FightersTrivia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GNC-A9-B8L"/>
                         <viewControllerLayoutGuide type="bottom" id="T6r-5h-kRw"/>
@@ -305,7 +322,7 @@
         <!--Game Done View Controller-->
         <scene sceneID="kIh-Ye-wrV">
             <objects>
-                <viewController id="wMn-1T-3ri" customClass="GameDoneViewController" customModule="Guess_the_Fighter__Угадаи__Бои_ца" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wMn-1T-3ri" customClass="GameDoneViewController" customModule="FightersTrivia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CX0-aI-Pco"/>
                         <viewControllerLayoutGuide type="bottom" id="HfV-Pe-OY9"/>
@@ -374,28 +391,10 @@
             </objects>
             <point key="canvasLocation" x="3720" y="-1026"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="WI4-i4-aZa">
-            <objects>
-                <viewController id="lZY-F4-Eua" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2tZ-gq-GrG"/>
-                        <viewControllerLayoutGuide type="bottom" id="gXc-qK-kgt"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ujH-lP-sWZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e9u-oc-ahC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4669.6000000000004" y="-1109.5952023988007"/>
-        </scene>
         <!--Question View Controller-->
         <scene sceneID="aut-6f-F80">
             <objects>
-                <viewController id="TUh-bb-cAe" customClass="QuestionViewController" customModule="Guess_the_Fighter__Угадаи__Бои_ца" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TUh-bb-cAe" customClass="QuestionViewController" customModule="FightersTrivia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ALz-Vy-BeL"/>
                         <viewControllerLayoutGuide type="bottom" id="OFb-PM-2Hv"/>
@@ -572,7 +571,7 @@
                                         </state>
                                         <connections>
                                             <action selector="moreInfoPressed:" destination="TUh-bb-cAe" eventType="touchUpInside" id="36o-cW-P9U"/>
-                                            <segue destination="4M2-DL-TiA" kind="presentation" id="K1t-Bp-F0K"/>
+                                            <segue destination="IrS-aR-INF" kind="show" id="gNK-P2-Oul"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -648,7 +647,7 @@
         <!--Splash Screen View Controller-->
         <scene sceneID="qWy-fj-bkg">
             <objects>
-                <viewController id="7L6-dR-Bzw" customClass="SplashScreenViewController" customModule="Guess_the_Fighter__Угадаи__Бои_ца" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7L6-dR-Bzw" customClass="SplashScreenViewController" customModule="FightersTrivia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a0d-Av-aF1"/>
                         <viewControllerLayoutGuide type="bottom" id="Vhr-HJ-cen"/>
@@ -657,16 +656,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="lightsindarkness" translatesAutoresizingMaskIntoConstraints="NO" id="f5n-NQ-Cf8">
-                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightsindarkness" translatesAutoresizingMaskIntoConstraints="NO" id="f5n-NQ-Cf8">
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="27B-Br-rpI"/>
                                     <constraint firstAttribute="width" constant="200" id="i74-jY-sLW"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ApiqA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvc-s3-Ldi">
-                                <rect key="frame" x="250" y="400" width="100" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ApiqA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvc-s3-Ldi">
+                                <rect key="frame" x="137.5" y="433.5" width="100" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="HBM-kQ-OUK"/>
                                     <constraint firstAttribute="width" constant="100" id="zN4-sX-sLI"/>
@@ -701,7 +700,7 @@
         <!--Start Game View Controller-->
         <scene sceneID="htH-cB-X5M">
             <objects>
-                <viewController id="lYr-hl-Qp2" customClass="StartGameViewController" customModule="Guess_the_Fighter__Угадаи__Бои_ца" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lYr-hl-Qp2" customClass="StartGameViewController" customModule="FightersTrivia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aDw-Pj-f5g"/>
                         <viewControllerLayoutGuide type="bottom" id="p6K-ER-1fm"/>
@@ -742,7 +741,7 @@
                                                 <rect key="frame" x="221" y="0.0" width="122" height="56"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcv-c5-9Ld">
-                                                        <rect key="frame" x="0.0" y="0.0" width="66.5" height="56"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="67.5" height="56"/>
                                                         <color key="backgroundColor" red="0.043687909841537476" green="0.033004790544509888" blue="0.017756741493940353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="20"/>
                                                         <state key="normal" title="Mute">
@@ -753,7 +752,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfV-wF-p2x">
-                                                        <rect key="frame" x="67.5" y="0.0" width="26.5" height="56"/>
+                                                        <rect key="frame" x="68.5" y="0.0" width="26.5" height="56"/>
                                                         <color key="backgroundColor" red="0.043358750641345978" green="0.025456935167312622" blue="0.05812869593501091" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="20"/>
                                                         <state key="normal" title="En">
@@ -761,7 +760,7 @@
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xU-Ar-e8T">
-                                                        <rect key="frame" x="95" y="0.0" width="27" height="56"/>
+                                                        <rect key="frame" x="96" y="0.0" width="26" height="56"/>
                                                         <color key="backgroundColor" red="0.022776851430535316" green="0.0035491250455379486" blue="0.026070395484566689" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="20"/>
                                                         <state key="normal" title="Ru">

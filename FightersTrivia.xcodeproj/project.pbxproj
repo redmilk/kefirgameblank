@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FBE672EC71A1CD03B1A0109 /* Pods_FightersTrivia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1CB4F54775A7428FEC7B2DC /* Pods_FightersTrivia.framework */; };
 		AC14DE221DF423FF00E7E3DD /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC14DE211DF423FF00E7E3DD /* WebViewController.swift */; };
 		AC274ADE1DEB105900906D1B /* GameDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC274ADD1DEB105900906D1B /* GameDoneViewController.swift */; };
 		AC274AE01DEB106F00906D1B /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC274ADF1DEB106F00906D1B /* GameOverViewController.swift */; };
@@ -18,10 +19,13 @@
 		AC99117E1DD9D32300D8C934 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC99117D1DD9D32300D8C934 /* QuestionViewController.swift */; };
 		AC9911801DD9D48000D8C934 /* Fighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC99117F1DD9D48000D8C934 /* Fighter.swift */; };
 		AC9911821DD9D9FD00D8C934 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9911811DD9D9FD00D8C934 /* GameController.swift */; };
+		ACCF20B61E57A48800953828 /* WikipediaHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCF20B51E57A48800953828 /* WikipediaHelper.m */; };
+		ACCF20BC1E57AA2400953828 /* WikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF20BB1E57AA2400953828 /* WikiViewController.swift */; };
 		ACD757CB1DE3406D00630C7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACD757CA1DE3406D00630C7F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A1CB4F54775A7428FEC7B2DC /* Pods_FightersTrivia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightersTrivia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC14DE211DF423FF00E7E3DD /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		AC274ADD1DEB105900906D1B /* GameDoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDoneViewController.swift; sourceTree = "<group>"; };
 		AC274ADF1DEB106F00906D1B /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
@@ -35,7 +39,13 @@
 		AC99117D1DD9D32300D8C934 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		AC99117F1DD9D48000D8C934 /* Fighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fighter.swift; sourceTree = "<group>"; };
 		AC9911811DD9D9FD00D8C934 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		ACCF20B41E57A48800953828 /* WikipediaHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WikipediaHelper.h; path = FightersTrivia/WikipediaHelper.h; sourceTree = "<group>"; };
+		ACCF20B51E57A48800953828 /* WikipediaHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WikipediaHelper.m; path = FightersTrivia/WikipediaHelper.m; sourceTree = "<group>"; };
+		ACCF20BA1E57A91500953828 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		ACCF20BB1E57AA2400953828 /* WikiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiViewController.swift; sourceTree = "<group>"; };
 		ACD757CA1DE3406D00630C7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FightersTrivia/Assets.xcassets; sourceTree = "<group>"; };
+		DEC066D669FD5E2DE8365F3F /* Pods-FightersTrivia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightersTrivia.release.xcconfig"; path = "Pods/Target Support Files/Pods-FightersTrivia/Pods-FightersTrivia.release.xcconfig"; sourceTree = "<group>"; };
+		E30439940C1D93C5E740C345 /* Pods-FightersTrivia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightersTrivia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FightersTrivia/Pods-FightersTrivia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,19 +53,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FBE672EC71A1CD03B1A0109 /* Pods_FightersTrivia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68E72FD9A52CAACDF913899C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1CB4F54775A7428FEC7B2DC /* Pods_FightersTrivia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AC6F20431DD1D4F3009C46B7 = {
 			isa = PBXGroup;
 			children = (
+				ACCF20BA1E57A91500953828 /* BridgingHeader.h */,
+				ACCF20B41E57A48800953828 /* WikipediaHelper.h */,
+				ACCF20B51E57A48800953828 /* WikipediaHelper.m */,
 				AC6F204E1DD1D4F3009C46B7 /* FightersTrivia */,
 				AC731C0D1DD778B200B45B8C /* Support */,
 				AC6F204D1DD1D4F3009C46B7 /* Products */,
 				ACD757CA1DE3406D00630C7F /* Assets.xcassets */,
+				C097CBA3697B4EEE6B9A08C7 /* Pods */,
+				68E72FD9A52CAACDF913899C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +94,7 @@
 		AC6F204E1DD1D4F3009C46B7 /* FightersTrivia */ = {
 			isa = PBXGroup;
 			children = (
+				ACCF20BB1E57AA2400953828 /* WikiViewController.swift */,
 				AC99117D1DD9D32300D8C934 /* QuestionViewController.swift */,
 				AC9911811DD9D9FD00D8C934 /* GameController.swift */,
 				AC274ADD1DEB105900906D1B /* GameDoneViewController.swift */,
@@ -94,6 +119,15 @@
 			path = FightersTrivia;
 			sourceTree = "<group>";
 		};
+		C097CBA3697B4EEE6B9A08C7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E30439940C1D93C5E740C345 /* Pods-FightersTrivia.debug.xcconfig */,
+				DEC066D669FD5E2DE8365F3F /* Pods-FightersTrivia.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC6F205E1DD1D4F3009C46B7 /* Build configuration list for PBXNativeTarget "FightersTrivia" */;
 			buildPhases = (
+				DE8267CC15898EC35EED90A3 /* [CP] Check Pods Manifest.lock */,
 				AC6F20481DD1D4F3009C46B7 /* Sources */,
 				AC6F20491DD1D4F3009C46B7 /* Frameworks */,
 				AC6F204A1DD1D4F3009C46B7 /* Resources */,
+				E935E4BA6DBAC95D133ED5EA /* [CP] Embed Pods Frameworks */,
+				1C7DB61B2EBE1B6CC8712FF2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,6 +198,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C7DB61B2EBE1B6CC8712FF2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FightersTrivia/Pods-FightersTrivia-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE8267CC15898EC35EED90A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E935E4BA6DBAC95D133ED5EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FightersTrivia/Pods-FightersTrivia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AC6F20481DD1D4F3009C46B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -168,9 +253,11 @@
 			files = (
 				AC274ADE1DEB105900906D1B /* GameDoneViewController.swift in Sources */,
 				AC9911821DD9D9FD00D8C934 /* GameController.swift in Sources */,
+				ACCF20B61E57A48800953828 /* WikipediaHelper.m in Sources */,
 				AC274AE21DEB16D200906D1B /* JUSTCODE.swift in Sources */,
 				AC14DE221DF423FF00E7E3DD /* WebViewController.swift in Sources */,
 				AC7DDFBB1DFABCEA000C1713 /* SplashScreenViewController.swift in Sources */,
+				ACCF20BC1E57AA2400953828 /* WikiViewController.swift in Sources */,
 				AC9911801DD9D48000D8C934 /* Fighter.swift in Sources */,
 				AC86E45E1DEDD7E700191AE6 /* StartGameViewController.swift in Sources */,
 				AC274AE01DEB106F00906D1B /* GameOverViewController.swift in Sources */,
@@ -280,8 +367,10 @@
 		};
 		AC6F205F1DD1D4F3009C46B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E30439940C1D93C5E740C345 /* Pods-FightersTrivia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FightersTrivia/Info.plist;
@@ -290,6 +379,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = apiqa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = BridgingHeader.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -297,8 +389,10 @@
 		};
 		AC6F20601DD1D4F3009C46B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEC066D669FD5E2DE8365F3F /* Pods-FightersTrivia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FightersTrivia/Info.plist;
@@ -307,6 +401,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = apiqa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = BridgingHeader.h;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -33,11 +33,11 @@ class GameController {
     var skipFighter: Bool = false
     var fightersCount: Int!
     var betweenQuestionView: UIView!
+    var previousFighter: Fighter!
     
     init() {
         
         CURRENTQUESTIONINDEX = 0    ///
-        
         
         self.fighters = [Fighter(name: "Manny Paquiao", image: "pac1"),
                          Fighter(name: "Mike Tyson", image: "tyson1"),
@@ -78,6 +78,8 @@ class GameController {
                 self.isItFirstQuestion = false
                 return
             }
+            //sohranim predisushego boica chtob zagruzit aktualnogo v wikiview
+            self.previousFighter = currentFighter
             qVController.refreshCurrentFighterNameLabel(self.fighters[CURRENTQUESTIONINDEX].name)
             /// chtob dva raza podryad ne srabativala animaciya smeni kartinki pri restarte
             /// esli restart, to obnulyaem svoistva igri i ostalnnoe propuskaem
@@ -361,6 +363,7 @@ class GameController {
         self.isItFirstQuestion = true
         self.fighters.shuffle()
         self.currentFighter = self.fighters[CURRENTQUESTIONINDEX]
+        self.previousFighter = currentFighter
         self.scoreLabel!.text = score.description
         self.currentAnswerListData = self.getRandomAnswers(howmany: answerListCount)
         self.currentRightAnswerIndex = generateRightAnswer()

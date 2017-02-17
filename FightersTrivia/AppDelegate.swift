@@ -15,28 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        /*
-        let highscore = NSEntityDescription.insertNewObjectForEntityForName("Highscore", inManagedObjectContext: managedObjectContext) as! Highscore
-        highscore.highscore = NSNumber(int: 20)
-        
-        do {
-            try managedObjectContext.save()
-            
-        } catch let error as NSError {
-            print("Saving error: \(error.localizedDescription)")
-
-        }
-        
-        /// retrieve
-       /*
-        do {
-            let request = NSFetchRequest(entityName: "Highscore")
-            let highScoreClass = try managedObjectContext.executeFetchRequest(request) as! Highscore
-            
-            print("Highscore is \(highscore[0].highscore)")
-        }
-                */ */
+      
         return true
     }
 
