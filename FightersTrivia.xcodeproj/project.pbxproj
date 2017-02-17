@@ -11,7 +11,6 @@
 		AC274ADE1DEB105900906D1B /* GameDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC274ADD1DEB105900906D1B /* GameDoneViewController.swift */; };
 		AC274AE01DEB106F00906D1B /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC274ADF1DEB106F00906D1B /* GameOverViewController.swift */; };
 		AC274AE21DEB16D200906D1B /* JUSTCODE.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC274AE11DEB16D200906D1B /* JUSTCODE.swift */; };
-		AC2BCE571E02E001000A25C2 /* PersistentGameValues.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC2BCE551E02E001000A25C2 /* PersistentGameValues.xcdatamodeld */; };
 		AC6F20501DD1D4F3009C46B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F204F1DD1D4F3009C46B7 /* AppDelegate.swift */; };
 		AC7DDFBB1DFABCEA000C1713 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7DDFBA1DFABCEA000C1713 /* SplashScreenViewController.swift */; };
 		AC86E45E1DEDD7E700191AE6 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC86E45D1DEDD7E700191AE6 /* StartGameViewController.swift */; };
@@ -27,8 +26,7 @@
 		AC274ADD1DEB105900906D1B /* GameDoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDoneViewController.swift; sourceTree = "<group>"; };
 		AC274ADF1DEB106F00906D1B /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		AC274AE11DEB16D200906D1B /* JUSTCODE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JUSTCODE.swift; sourceTree = "<group>"; };
-		AC2BCE561E02E001000A25C2 /* PersistentGameValues.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersistentGameValues.xcdatamodel; sourceTree = "<group>"; };
-		AC6F204C1DD1D4F3009C46B7 /* Guess the Fighter, Угадай Бойца.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guess the Fighter, Угадай Бойца.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC6F204C1DD1D4F3009C46B7 /* FightersTrivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FightersTrivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6F204F1DD1D4F3009C46B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC6F205B1DD1D4F3009C46B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC7DDFBA1DFABCEA000C1713 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
@@ -37,7 +35,7 @@
 		AC99117D1DD9D32300D8C934 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		AC99117F1DD9D48000D8C934 /* Fighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fighter.swift; sourceTree = "<group>"; };
 		AC9911811DD9D9FD00D8C934 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
-		ACD757CA1DE3406D00630C7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Guess the Fighter, Угадай Бойца/Assets.xcassets"; sourceTree = "<group>"; };
+		ACD757CA1DE3406D00630C7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FightersTrivia/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +52,7 @@
 		AC6F20431DD1D4F3009C46B7 = {
 			isa = PBXGroup;
 			children = (
-				AC6F204E1DD1D4F3009C46B7 /* Guess the Fighter, Угадай Бойца */,
+				AC6F204E1DD1D4F3009C46B7 /* FightersTrivia */,
 				AC731C0D1DD778B200B45B8C /* Support */,
 				AC6F204D1DD1D4F3009C46B7 /* Products */,
 				ACD757CA1DE3406D00630C7F /* Assets.xcassets */,
@@ -64,12 +62,12 @@
 		AC6F204D1DD1D4F3009C46B7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC6F204C1DD1D4F3009C46B7 /* Guess the Fighter, Угадай Бойца.app */,
+				AC6F204C1DD1D4F3009C46B7 /* FightersTrivia.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AC6F204E1DD1D4F3009C46B7 /* Guess the Fighter, Угадай Бойца */ = {
+		AC6F204E1DD1D4F3009C46B7 /* FightersTrivia */ = {
 			isa = PBXGroup;
 			children = (
 				AC99117D1DD9D32300D8C934 /* QuestionViewController.swift */,
@@ -80,7 +78,7 @@
 				AC14DE211DF423FF00E7E3DD /* WebViewController.swift */,
 				AC7DDFBA1DFABCEA000C1713 /* SplashScreenViewController.swift */,
 			);
-			path = "Guess the Fighter, Угадай Бойца";
+			path = FightersTrivia;
 			sourceTree = "<group>";
 		};
 		AC731C0D1DD778B200B45B8C /* Support */ = {
@@ -91,18 +89,17 @@
 				AC99117F1DD9D48000D8C934 /* Fighter.swift */,
 				AC6F204F1DD1D4F3009C46B7 /* AppDelegate.swift */,
 				AC6F205B1DD1D4F3009C46B7 /* Info.plist */,
-				AC2BCE551E02E001000A25C2 /* PersistentGameValues.xcdatamodeld */,
 			);
 			name = Support;
-			path = "Guess the Fighter, Угадай Бойца";
+			path = FightersTrivia;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AC6F204B1DD1D4F3009C46B7 /* Guess the Fighter, Угадай Бойца */ = {
+		AC6F204B1DD1D4F3009C46B7 /* FightersTrivia */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC6F205E1DD1D4F3009C46B7 /* Build configuration list for PBXNativeTarget "Guess the Fighter, Угадай Бойца" */;
+			buildConfigurationList = AC6F205E1DD1D4F3009C46B7 /* Build configuration list for PBXNativeTarget "FightersTrivia" */;
 			buildPhases = (
 				AC6F20481DD1D4F3009C46B7 /* Sources */,
 				AC6F20491DD1D4F3009C46B7 /* Frameworks */,
@@ -112,9 +109,9 @@
 			);
 			dependencies = (
 			);
-			name = "Guess the Fighter, Угадай Бойца";
+			name = FightersTrivia;
 			productName = "Guess the Fighter, Угадай Бойца";
-			productReference = AC6F204C1DD1D4F3009C46B7 /* Guess the Fighter, Угадай Бойца.app */;
+			productReference = AC6F204C1DD1D4F3009C46B7 /* FightersTrivia.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -125,7 +122,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = piqapp;
+				ORGANIZATIONNAME = apiqa;
 				TargetAttributes = {
 					AC6F204B1DD1D4F3009C46B7 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -134,7 +131,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AC6F20471DD1D4F3009C46B7 /* Build configuration list for PBXProject "Guess the Fighter, Угадай Бойца" */;
+			buildConfigurationList = AC6F20471DD1D4F3009C46B7 /* Build configuration list for PBXProject "FightersTrivia" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -147,7 +144,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AC6F204B1DD1D4F3009C46B7 /* Guess the Fighter, Угадай Бойца */,
+				AC6F204B1DD1D4F3009C46B7 /* FightersTrivia */,
 			);
 		};
 /* End PBXProject section */
@@ -176,7 +173,6 @@
 				AC7DDFBB1DFABCEA000C1713 /* SplashScreenViewController.swift in Sources */,
 				AC9911801DD9D48000D8C934 /* Fighter.swift in Sources */,
 				AC86E45E1DEDD7E700191AE6 /* StartGameViewController.swift in Sources */,
-				AC2BCE571E02E001000A25C2 /* PersistentGameValues.xcdatamodeld in Sources */,
 				AC274AE01DEB106F00906D1B /* GameOverViewController.swift in Sources */,
 				AC6F20501DD1D4F3009C46B7 /* AppDelegate.swift in Sources */,
 				AC99117E1DD9D32300D8C934 /* QuestionViewController.swift in Sources */,
@@ -190,6 +186,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -225,9 +222,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = FightersTrivia;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -238,6 +237,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -267,8 +267,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = FightersTrivia;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -282,10 +284,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Guess the Fighter, Угадай Бойца/Info.plist";
+				INFOPLIST_FILE = FightersTrivia/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FightersTrivia;
+				PRODUCT_BUNDLE_IDENTIFIER = apiqa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
@@ -299,10 +301,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Guess the Fighter, Угадай Бойца/Info.plist";
+				INFOPLIST_FILE = FightersTrivia/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FightersTrivia;
+				PRODUCT_BUNDLE_IDENTIFIER = apiqa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
@@ -313,7 +315,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AC6F20471DD1D4F3009C46B7 /* Build configuration list for PBXProject "Guess the Fighter, Угадай Бойца" */ = {
+		AC6F20471DD1D4F3009C46B7 /* Build configuration list for PBXProject "FightersTrivia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC6F205C1DD1D4F3009C46B7 /* Debug */,
@@ -322,7 +324,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC6F205E1DD1D4F3009C46B7 /* Build configuration list for PBXNativeTarget "Guess the Fighter, Угадай Бойца" */ = {
+		AC6F205E1DD1D4F3009C46B7 /* Build configuration list for PBXNativeTarget "FightersTrivia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC6F205F1DD1D4F3009C46B7 /* Debug */,
@@ -332,19 +334,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		AC2BCE551E02E001000A25C2 /* PersistentGameValues.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				AC2BCE561E02E001000A25C2 /* PersistentGameValues.xcdatamodel */,
-			);
-			currentVersion = AC2BCE561E02E001000A25C2 /* PersistentGameValues.xcdatamodel */;
-			path = PersistentGameValues.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = AC6F20441DD1D4F3009C46B7 /* Project object */;
 }

@@ -6,7 +6,6 @@
 //  Copyright © 2016 piqapp. All rights reserved.
 //
 
-import CoreData
 import UIKit
 
 @UIApplicationMain

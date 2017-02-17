@@ -73,13 +73,13 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         theGameController.startGame()
     }
     override func viewDidAppear(_ animated: Bool) {
-        ///start animations here
         self.gradientBackgroundColorAnimation()
         self.gradientBackgroundChangePositionAnimation()
-        /// First image init
-        setNewImage(theGameController.currentFighter.image)
     }
     override func viewWillAppear(_ animated: Bool) {
+        // prezhdevremenniy pokaz kartinki, a zatem animacya. uberaet posle web view
+        // ubrali eto iz viewDidLoad
+        setNewImage(theGameController.currentFighter.image)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -98,7 +98,8 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     fileprivate func ifOrientChanged() {
-        gradient.frame = mainView.bounds
+        //gradient.frame = mainView.bounds
+        gradientBackgroundColorAnimationStopAndStart()
     }
     
     
@@ -253,8 +254,13 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         anim.repeatCount = Float.infinity
         anim.autoreverses = true
         anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        
-        self.gradient.add(anim, forKey: nil)
+        self.gradient.add(anim, forKey: "asd")
+    }
+    
+    func gradientBackgroundColorAnimationStopAndStart() {
+        gradient.removeAnimation(forKey: "asd")
+        //self.gradient.removeAllAnimations()
+        gradientBackgroundColorAnimation()
     }
     
     func gradientBackgroundChangePositionAnimation() {
@@ -546,7 +552,6 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         /// ( gradien uvilichivaem v shirinu dvoe i stavim po centru (x: - fra.siz.wi) )
         gradient.frame = CGRect(x: -self.view.frame.size.width/3, y: 0.0, width: self.view.frame.size.width*3, height: self.view.frame.size.height)
         gradient.zPosition = -10
-        
         self.gradientView.layer.addSublayer(gradient)
     }
     

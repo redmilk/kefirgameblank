@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AC6F204B1DD1D4F3009C46B7"
-               BuildableName = "Guess the Fighter, &#x423;&#x433;&#x430;&#x434;&#x430;&#x438;&#x306; &#x411;&#x43e;&#x438;&#x306;&#x446;&#x430;.app"
-               BlueprintName = "Guess the Fighter, &#x423;&#x433;&#x430;&#x434;&#x430;&#x438;&#x306; &#x411;&#x43e;&#x438;&#x306;&#x446;&#x430;"
-               ReferencedContainer = "container:Guess the Fighter, &#x423;&#x433;&#x430;&#x434;&#x430;&#x438;&#x306; &#x411;&#x43e;&#x438;&#x306;&#x446;&#x430;.xcodeproj">
+               BuildableName = "FightersTrivia.app"
+               BlueprintName = "FightersTrivia"
+               ReferencedContainer = "container:FightersTrivia.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AC6F204B1DD1D4F3009C46B7"
-            BuildableName = "Guess the Fighter, &#x423;&#x433;&#x430;&#x434;&#x430;&#x438;&#x306; &#x411;&#x43e;&#x438;&#x306;&#x446;&#x430;.app"
-            BlueprintName = "Guess the Fighter, &#x423;&#x433;&#x430;&#x434;&#x430;&#x438;&#x306; &#x411;&#x43e;&#x438;&#x306;&#x446;&#x430;"
-            ReferencedContainer = "container:Guess the Fighter, &#x423;&#x433;&#x430;&#x434;&#x430;&#x438;&#x306; &#x411;&#x43e;&#x438;&#x306;&#x446;&#x430;.xcodeproj">
+            BuildableName = "FightersTrivia.app"
+            BlueprintName = "FightersTrivia"
+            ReferencedContainer = "container:FightersTrivia.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AC6F204B1DD1D4F3009C46B7"
-            BuildableName = "Guess the Fighter, &#x423;&#x433;&#x430;&#x434;&#x430;&#x438;&#x306; &#x411;&#x43e;&#x438;&#x306;&#x446;&#x430;.app"
-            BlueprintName = "Guess the Fighter, &#x423;&#x433;&#x430;&#x434;&#x430;&#x438;&#x306; &#x411;&#x43e;&#x438;&#x306;&#x446;&#x430;"
-            ReferencedContainer = "container:Guess the Fighter, &#x423;&#x433;&#x430;&#x434;&#x430;&#x438;&#x306; &#x411;&#x43e;&#x438;&#x306;&#x446;&#x430;.xcodeproj">
+            BuildableName = "FightersTrivia.app"
+            BlueprintName = "FightersTrivia"
+            ReferencedContainer = "container:FightersTrivia.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AC6F204B1DD1D4F3009C46B7"
-            BuildableName = "Guess the Fighter, &#x423;&#x433;&#x430;&#x434;&#x430;&#x438;&#x306; &#x411;&#x43e;&#x438;&#x306;&#x446;&#x430;.app"
-            BlueprintName = "Guess the Fighter, &#x423;&#x433;&#x430;&#x434;&#x430;&#x438;&#x306; &#x411;&#x43e;&#x438;&#x306;&#x446;&#x430;"
-            ReferencedContainer = "container:Guess the Fighter, &#x423;&#x433;&#x430;&#x434;&#x430;&#x438;&#x306; &#x411;&#x43e;&#x438;&#x306;&#x446;&#x430;.xcodeproj">
+            BuildableName = "FightersTrivia.app"
+            BlueprintName = "FightersTrivia"
+            ReferencedContainer = "container:FightersTrivia.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
@@ -86,6 +86,6 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
-      revealArchiveInOrganizer = "YES">
+      revealArchiveInOrganizer = "NO">
    </ArchiveAction>
 </Scheme>
