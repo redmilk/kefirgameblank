@@ -34,6 +34,7 @@ class GameController {
     var fightersCount: Int!
     var betweenQuestionView: UIView!
     var previousFighter: Fighter!
+    var isBetweenQuestionsViewOpen: Bool = false
     
     init() {
         
@@ -79,7 +80,6 @@ class GameController {
                 return
             }
             //sohranim predisushego boica chtob zagruzit aktualnogo v wikiview
-            self.previousFighter = currentFighter
             qVController.refreshCurrentFighterNameLabel(self.fighters[CURRENTQUESTIONINDEX].name)
             /// chtob dva raza podryad ne srabativala animaciya smeni kartinki pri restarte
             /// esli restart, to obnulyaem svoistva igri i ostalnnoe propuskaem
@@ -92,9 +92,9 @@ class GameController {
             if CURRENTQUESTIONINDEX > self.fighters.count {
                 return
             }
-            
+            //*****
+            self.previousFighter = currentFighter
             self.initCurrentQuestion()
-            
             /// esli eto ne "propustit boica"
             if (self.skipFighter == false) {
                 self.playerWasRightGoToTheNextQuestion()
@@ -161,8 +161,11 @@ class GameController {
         // zamenit na animation delay
         let triggerTime = (Int64(NSEC_PER_SEC) * Int64(1.0))
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(triggerTime) / Double(NSEC_PER_SEC), execute: { () -> Void in
+            // MARK: - between question view
             //refresh frame of the betweenQuestionView
+            self.isBetweenQuestionsViewOpen = true
             self.betweenQuestionView.frame = qVController.picker.frame
+            qVController.moreInfoButton.becomeFirstResponder()
             //self.betweenQuestionView.constraints = qVController.picker.constraints
             UIView.transition(with: self.betweenQuestionView, duration: 0.55, options: [.curveEaseOut, .transitionCurlDown], animations: {
                 self.betweenQuestionView.isHidden = false

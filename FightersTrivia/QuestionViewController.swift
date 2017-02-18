@@ -71,15 +71,18 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         theGameController.scoreLabel = scoreLabel
         self.congratuLationStripAndAnswerButtonsConstraintsInit()
         theGameController.startGame()
+        //ubrali eto iz view did apear
     }
     override func viewDidAppear(_ animated: Bool) {
         self.gradientBackgroundColorAnimation()
         self.gradientBackgroundChangePositionAnimation()
+        if theGameController.isBetweenQuestionsViewOpen == false {
+            setNewImage(theGameController.currentFighter.image)
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
         // prezhdevremenniy pokaz kartinki, a zatem animacya. uberaet posle web view
-        // ubrali eto iz viewDidLoad
-        setNewImage(theGameController.currentFighter.image)
+        // ubrali eto iz viewDidAppear
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -394,7 +397,8 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     func setNewImage(_ imageName: String) {
-        if theGameController != nil {
+        // MARK: - change image sound and etc.
+        if (theGameController != nil && theGameController.isBetweenQuestionsViewOpen == false){
             theGameController.playSound("CHANGEIMAGE")
         }
         let image = UIImage(named: imageName)!
@@ -581,7 +585,8 @@ class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         self.imageView.layer.add(anim, forKey: nil)
     }
     
-    @IBAction func moreInfoPressed(_ sender: Any) {
-        
+    @IBAction func moreInfoPressed(_ sender: UIButton) {
+        self.betweenQuestionView.isHidden = true
     }
+
 }
