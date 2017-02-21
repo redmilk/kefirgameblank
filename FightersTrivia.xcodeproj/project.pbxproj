@@ -11,6 +11,7 @@
 		AC274ADE1DEB105900906D1B /* GameDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC274ADD1DEB105900906D1B /* GameDoneViewController.swift */; };
 		AC274AE01DEB106F00906D1B /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC274ADF1DEB106F00906D1B /* GameOverViewController.swift */; };
 		AC274AE21DEB16D200906D1B /* JUSTCODE.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC274AE11DEB16D200906D1B /* JUSTCODE.swift */; };
+		AC6D7C151E5C4D6800184924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6D7C141E5C4D6800184924 /* Assets.xcassets */; };
 		AC6F20501DD1D4F3009C46B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F204F1DD1D4F3009C46B7 /* AppDelegate.swift */; };
 		AC7DDFBB1DFABCEA000C1713 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7DDFBA1DFABCEA000C1713 /* SplashScreenViewController.swift */; };
 		AC86E45E1DEDD7E700191AE6 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC86E45D1DEDD7E700191AE6 /* StartGameViewController.swift */; };
@@ -18,7 +19,6 @@
 		AC99117E1DD9D32300D8C934 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC99117D1DD9D32300D8C934 /* QuestionViewController.swift */; };
 		AC9911801DD9D48000D8C934 /* Fighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC99117F1DD9D48000D8C934 /* Fighter.swift */; };
 		AC9911821DD9D9FD00D8C934 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9911811DD9D9FD00D8C934 /* GameController.swift */; };
-		ACFD05671E5884F00042F4A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACFD05661E5884F00042F4A4 /* Assets.xcassets */; };
 		D4EE62B74A69655CD87CC785 /* Pods_FightersTrivia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A134C9705E1A1E39B8D2A47A /* Pods_FightersTrivia.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +30,7 @@
 		AC274ADD1DEB105900906D1B /* GameDoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDoneViewController.swift; sourceTree = "<group>"; };
 		AC274ADF1DEB106F00906D1B /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		AC274AE11DEB16D200906D1B /* JUSTCODE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JUSTCODE.swift; sourceTree = "<group>"; };
+		AC6D7C141E5C4D6800184924 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC6F204C1DD1D4F3009C46B7 /* FightersTrivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FightersTrivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6F204F1DD1D4F3009C46B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC6F205B1DD1D4F3009C46B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,7 +40,6 @@
 		AC99117D1DD9D32300D8C934 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		AC99117F1DD9D48000D8C934 /* Fighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fighter.swift; sourceTree = "<group>"; };
 		AC9911811DD9D9FD00D8C934 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
-		ACFD05661E5884F00042F4A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +74,10 @@
 		AC6F20431DD1D4F3009C46B7 = {
 			isa = PBXGroup;
 			children = (
+				AC6D7C141E5C4D6800184924 /* Assets.xcassets */,
 				AC6F204E1DD1D4F3009C46B7 /* FightersTrivia */,
 				AC731C0D1DD778B200B45B8C /* Support */,
 				AC6F204D1DD1D4F3009C46B7 /* Products */,
-				ACFD05661E5884F00042F4A4 /* Assets.xcassets */,
 				4553D5A81B31F18AB348C7DF /* Pods */,
 				1945E3B39A8CECD704BB18CD /* Frameworks */,
 			);
@@ -181,7 +181,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACFD05671E5884F00042F4A4 /* Assets.xcassets in Resources */,
+				AC6D7C151E5C4D6800184924 /* Assets.xcassets in Resources */,
 				AC8E35FF1E34D15A0042B316 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,6 +17,8 @@ var theGameController: GameController!
 
 class GameController {
     fileprivate var fighters: [Fighter] = [Fighter]()
+    fileprivate var chicks: [Fighter] = [Fighter]()
+
     
     var currentFighter: Fighter!
     var triesLeft: Int = 3
@@ -40,7 +42,20 @@ class GameController {
         
         CURRENTQUESTIONINDEX = 0    ///
         
-        self.fighters = [Fighter(name: "Manny Paquiao", image: "pac1"),
+        self.fighters = [Fighter(name: "Jennyfer Lawrence", image: "lawrence"),
+                         Fighter(name: "Maria Kachurovska", image: "masha"),
+                         Fighter(name: "Kira Knightley", image: "knightley"),
+                         Fighter(name: "Jennyfer Connelly", image: "conneli"),
+                         Fighter(name: "Ariel Cabbel", image: "cabbel"),
+                         Fighter(name: "Elisha Cuthbert", image: "sosedka"),
+                         Fighter(name: "Liv Tyler", image: "tyler"),
+                         Fighter(name: "Fergie Duhamel", image: "fergie"),
+                         Fighter(name: "Britney Spears", image: "spears"),
+                         Fighter(name: "Iggy Azelia", image: "azelia"),
+                         Fighter(name: "Nicky Minaj", image: "minaj"),]
+        
+        
+        self.chicks = [Fighter(name: "Manny Paquiao", image: "pac1"),
                          Fighter(name: "Mike Tyson", image: "tyson1"),
                          Fighter(name: "John Johns", image: "jones1"),
                          Fighter(name: "Conor McGregor", image: "conor1"),
@@ -60,7 +75,7 @@ class GameController {
         self.fightersCount = self.fighters.count
         
         ///esli ukazano bolshe chem nuzhno to beskonechniy cikl
-        self.answerListCount = 10 //
+        self.answerListCount = 5 //
         
         //highscore
         if let hs = UserDefaults.standard.value(forKey: "highscore") as? Int {

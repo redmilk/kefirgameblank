@@ -29,8 +29,13 @@ class WebViewController: UIViewController, UIScrollViewDelegate, UIWebViewDelega
     
         let fighter = theGameController.previousFighter.name
         //zamenit probeli na nizhniy procherk
-        let searchWord = fighter.replacingOccurrences(of: " ", with: "_", options: .literal, range: nil)
-        
+        let searchWord: String
+        if fighter.contains(" ") {
+            searchWord = fighter.replacingOccurrences(of: " ", with: "_", options: .literal, range: nil)
+        } else {
+            searchWord = fighter
+        }
+        print("SEARCHWORD::: " + searchWord)
         self.link = "https://en.wikipedia.org/wiki/\(searchWord)"
         let url = URL (string: link)
         let requestObj = URLRequest(url: url!)

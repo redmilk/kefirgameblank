@@ -198,20 +198,20 @@
                                 <rect key="frame" x="20" y="0.0" width="343" height="637"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game done!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ke-hB-7nr">
-                                        <rect key="frame" x="7.5" y="0.0" width="328" height="261"/>
+                                        <rect key="frame" x="7.5" y="0.0" width="328" height="261.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="200"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ak9-7Q-l3F">
-                                        <rect key="frame" x="5.5" y="311" width="332" height="95.5"/>
+                                        <rect key="frame" x="5.5" y="311.5" width="332" height="95.5"/>
                                         <string key="text">You have guessed all the fighters. It seems that your knowledge of fighting world is quite deep. Good job and thank you for playing.</string>
                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="20"/>
                                         <color key="textColor" red="0.99389076232910156" green="0.98009032011032104" blue="0.97994959354400635" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY6-pZ-05V">
-                                        <rect key="frame" x="90" y="456.5" width="163" height="65.5"/>
+                                        <rect key="frame" x="90" y="457" width="163" height="65"/>
                                         <color key="backgroundColor" red="0.034019060432910919" green="0.0044255135580897331" blue="0.0045814421027898788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="44"/>
                                         <state key="normal" title="GIFT">
@@ -295,7 +295,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="a63-wl-h8i">
-                                                <rect key="frame" x="124.5" y="0.0" width="134" height="0.0"/>
+                                                <rect key="frame" x="125" y="0.0" width="134" height="0.0"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="singleDot" translatesAutoresizingMaskIntoConstraints="NO" id="OcQ-vG-UaQ">
                                                         <rect key="frame" x="0.0" y="0.0" width="44" height="0.0"/>
@@ -316,7 +316,7 @@
                                                 </constraints>
                                             </stackView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aTc-Mz-t2B">
-                                                <rect key="frame" x="0.0" y="0.0" width="383" height="416.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="383" height="417"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="350" id="dPm-Bf-yVh"/>
@@ -328,14 +328,14 @@
                                                 </variation>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fighter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="33" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gjt-5c-deM">
-                                                <rect key="frame" x="0.0" y="416.5" width="383" height="84"/>
+                                                <rect key="frame" x="0.0" y="417" width="383" height="84"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="65"/>
                                                 <color key="textColor" red="0.99497425556182861" green="0.99537229537963867" blue="0.98944544792175293" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mp-92-xpJ" userLabel="Picker">
-                                                <rect key="frame" x="0.0" y="500.5" width="383" height="166.5"/>
+                                                <rect key="frame" x="0.0" y="501" width="383" height="166"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.65721318493150682" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
@@ -656,34 +656,18 @@
                                         </variation>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="R5P-Rc-ijI">
-                                        <rect key="frame" x="0.0" y="57" width="343" height="447"/>
+                                        <rect key="frame" x="26" y="57" width="291" height="447"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bzp-GP-fom">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="0.0"/>
-                                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="180"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fighters Trivia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Iuy-AS-Q1X">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="447"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chicks Trivia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Iuy-AS-Q1X">
+                                                <rect key="frame" x="0.0" y="0.0" width="291" height="447"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="172"/>
+                                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="100"/>
                                                 <color key="textColor" red="0.96728265285491943" green="0.99179679155349731" blue="0.96300256252288818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.057039059698581696" green="0.15116891264915466" blue="0.15793325006961823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <size key="shadowOffset" width="3" height="1"/>
                                             </label>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="Iuy-AS-Q1X" firstAttribute="width" secondItem="Bzp-GP-fom" secondAttribute="width" id="I9g-Qh-M8r"/>
-                                            <constraint firstItem="Bzp-GP-fom" firstAttribute="height" secondItem="Iuy-AS-Q1X" secondAttribute="height" id="L0o-Ss-4aS"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="L0o-Ss-4aS"/>
-                                                <exclude reference="I9g-Qh-M8r"/>
-                                            </mask>
-                                        </variation>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wW9-cG-OiO">
                                         <rect key="frame" x="0.0" y="505" width="343" height="56"/>
@@ -802,7 +786,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Pacquaio_Manny" width="500" height="840"/>
+        <image name="Pacquaio_Manny" width="470" height="637"/>
         <image name="lightsindarkness" width="1000" height="1000"/>
         <image name="singleDot" width="1000" height="1000"/>
         <image name="wikipedia3" width="300" height="225"/>
