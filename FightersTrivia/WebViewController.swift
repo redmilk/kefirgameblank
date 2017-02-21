@@ -8,21 +8,30 @@
 
 import UIKit
 
-class WebViewController: UIViewController {
+class WebViewController: UIViewController, UIScrollViewDelegate, UIWebViewDelegate {
 
-    @IBOutlet weak var webView: UIWebView!
-    @IBOutlet weak var titleLabel: UILabel!
-    
+    @IBOutlet weak var webView: UIWebView!    
+    @IBOutlet weak var activityIndicator:
+    UIActivityIndicatorView!
     var link: String!
     var currentTitle: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.currentTitle = "Mike Zambidis"
-        self.titleLabel.text = self.currentTitle
+        //for activity indicator
+        webView.delegate = self
+        webView.scrollView.delegate = self
+        webView.scrollView.showsHorizontalScrollIndicator = false
         
-        self.link = "https://www.youtube.com/watch?v=Y92Eppp8GDo"
+        activityIndicator.startAnimating()
+        activityIndicator.isHidden = false
+    
+        let fighter = theGameController.previousFighter.name
+        //zamenit probeli na nizhniy procherk
+        let searchWord = fighter.replacingOccurrences(of: " ", with: "_", options: .literal, range: nil)
+        
+        self.link = "https://en.wikipedia.org/wiki/\(searchWord)"
         let url = URL (string: link)
         let requestObj = URLRequest(url: url!)
         webView.loadRequest(requestObj)
@@ -30,9 +39,16 @@ class WebViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.x > 0 {
+            let point = CGPoint(x: 0, y: scrollView.contentOffset.y)
+            scrollView.contentOffset = point
+        }
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
     }
     
     @IBAction func forwardButton(_ sender: UIButton) {
@@ -48,6 +64,10 @@ class WebViewController: UIViewController {
     
     @IBAction func refreshButton(_ sender: UIButton) {
         self.webView.reload()
+    }
+    
+    @IBAction func crossPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     

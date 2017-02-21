@@ -18,10 +18,14 @@
 		AC99117E1DD9D32300D8C934 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC99117D1DD9D32300D8C934 /* QuestionViewController.swift */; };
 		AC9911801DD9D48000D8C934 /* Fighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC99117F1DD9D48000D8C934 /* Fighter.swift */; };
 		AC9911821DD9D9FD00D8C934 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9911811DD9D9FD00D8C934 /* GameController.swift */; };
-		ACD757CB1DE3406D00630C7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACD757CA1DE3406D00630C7F /* Assets.xcassets */; };
+		ACFD05671E5884F00042F4A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACFD05661E5884F00042F4A4 /* Assets.xcassets */; };
+		D4EE62B74A69655CD87CC785 /* Pods_FightersTrivia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A134C9705E1A1E39B8D2A47A /* Pods_FightersTrivia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1325351173E1AAF2590AE388 /* Pods-FightersTrivia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightersTrivia.release.xcconfig"; path = "Pods/Target Support Files/Pods-FightersTrivia/Pods-FightersTrivia.release.xcconfig"; sourceTree = "<group>"; };
+		7658956D60BA29435DE8C9F9 /* Pods-FightersTrivia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightersTrivia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FightersTrivia/Pods-FightersTrivia.debug.xcconfig"; sourceTree = "<group>"; };
+		A134C9705E1A1E39B8D2A47A /* Pods_FightersTrivia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightersTrivia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC14DE211DF423FF00E7E3DD /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		AC274ADD1DEB105900906D1B /* GameDoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDoneViewController.swift; sourceTree = "<group>"; };
 		AC274ADF1DEB106F00906D1B /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
@@ -35,7 +39,7 @@
 		AC99117D1DD9D32300D8C934 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		AC99117F1DD9D48000D8C934 /* Fighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fighter.swift; sourceTree = "<group>"; };
 		AC9911811DD9D9FD00D8C934 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
-		ACD757CA1DE3406D00630C7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FightersTrivia/Assets.xcassets; sourceTree = "<group>"; };
+		ACFD05661E5884F00042F4A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,19 +47,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4EE62B74A69655CD87CC785 /* Pods_FightersTrivia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1945E3B39A8CECD704BB18CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A134C9705E1A1E39B8D2A47A /* Pods_FightersTrivia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4553D5A81B31F18AB348C7DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7658956D60BA29435DE8C9F9 /* Pods-FightersTrivia.debug.xcconfig */,
+				1325351173E1AAF2590AE388 /* Pods-FightersTrivia.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AC6F20431DD1D4F3009C46B7 = {
 			isa = PBXGroup;
 			children = (
 				AC6F204E1DD1D4F3009C46B7 /* FightersTrivia */,
 				AC731C0D1DD778B200B45B8C /* Support */,
 				AC6F204D1DD1D4F3009C46B7 /* Products */,
-				ACD757CA1DE3406D00630C7F /* Assets.xcassets */,
+				ACFD05661E5884F00042F4A4 /* Assets.xcassets */,
+				4553D5A81B31F18AB348C7DF /* Pods */,
+				1945E3B39A8CECD704BB18CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC6F205E1DD1D4F3009C46B7 /* Build configuration list for PBXNativeTarget "FightersTrivia" */;
 			buildPhases = (
+				2F7A5114F26A4C9AD4A3D09C /* [CP] Check Pods Manifest.lock */,
 				AC6F20481DD1D4F3009C46B7 /* Sources */,
 				AC6F20491DD1D4F3009C46B7 /* Frameworks */,
 				AC6F204A1DD1D4F3009C46B7 /* Resources */,
+				D81013B54C01BB7C9BB0CEB7 /* [CP] Embed Pods Frameworks */,
+				291760CF922BA879DCC869D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -154,12 +181,60 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACD757CB1DE3406D00630C7F /* Assets.xcassets in Resources */,
+				ACFD05671E5884F00042F4A4 /* Assets.xcassets in Resources */,
 				AC8E35FF1E34D15A0042B316 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		291760CF922BA879DCC869D7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FightersTrivia/Pods-FightersTrivia-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F7A5114F26A4C9AD4A3D09C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D81013B54C01BB7C9BB0CEB7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FightersTrivia/Pods-FightersTrivia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AC6F20481DD1D4F3009C46B7 /* Sources */ = {
@@ -280,16 +355,21 @@
 		};
 		AC6F205F1DD1D4F3009C46B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7658956D60BA29435DE8C9F9 /* Pods-FightersTrivia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FightersTrivia/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = apiqa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -297,16 +377,20 @@
 		};
 		AC6F20601DD1D4F3009C46B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1325351173E1AAF2590AE388 /* Pods-FightersTrivia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FightersTrivia/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = apiqa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
